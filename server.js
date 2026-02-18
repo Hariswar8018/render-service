@@ -9,7 +9,7 @@ app.post("/create-order", async (req, res) => {
     const orderId = "order_" + Date.now();
 
     const response = await axios.post(
-      "https://sandbox.cashfree.com/pg/orders",
+      "https://api.cashfree.com/pg/orders",
       {
         order_id: orderId,
         order_amount: req.body.amount,
